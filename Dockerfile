@@ -8,7 +8,7 @@ FROM gazebo:libgazebo7
 MAINTAINER Giovanni De Gasperis giovanni@giodegas.it
 
 # install packages
-RUN apt-get update && apt-get install -q -y \
+RUN apt-get update && apt-get upgrade -q-y & apt-get install -q -y \
     build-essential \
     cmake \
     imagemagick \
@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -q -y \
     && rm -rf /var/lib/apt/lists/*
 
 # install gazebo packages
-RUN apt-get update && apt-get install -q -y \
+RUN apt-get install -q -y \
     libgazebo7-dev=7.3.1* \
     && rm -rf /var/lib/apt/lists/*
 
