@@ -1,4 +1,4 @@
-# Taken from http://github.com/osrf/docker_images/blob/master/gazebo/gazebo7/gzweb7/Dockerfile
+# Started from http://github.com/osrf/docker_images/blob/master/gazebo/gazebo7/gzweb7/Dockerfile
 
 FROM gazebo:libgazebo7
 # originally from MAINTAINER Steven Peters scpeters+buildfarm@osrfoundation.org
@@ -39,4 +39,4 @@ EXPOSE 8080
 EXPOSE 7681
 
 # run gzserver and gzweb
-CMD ./root/gzweb/start_gzweb.sh && gzserver
+# CMD ./root/gzweb/start_gzweb.sh && gzserver
