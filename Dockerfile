@@ -1,14 +1,12 @@
 # Taken from http://github.com/osrf/docker_images/blob/master/gazebo/gazebo7/gzweb7/Dockerfile
 
-# This is an auto generated Dockerfile for gazebo:gzweb7
-# generated from templates/docker_images/create_gzweb_image.Dockerfile.em
-# generated on 2016-10-13 17:16:25 +0000
 FROM gazebo:libgazebo7
 # originally from MAINTAINER Steven Peters scpeters+buildfarm@osrfoundation.org
 MAINTAINER Giovanni De Gasperis giovanni@giodegas.it
 
 # install packages
-RUN apt-get update && apt-get upgrade -q-y & apt-get install -q -y \
+RUN apt-get update && apt-get upgrade -q-y 
+RUN apt-get install -q -y \
     build-essential \
     cmake \
     imagemagick \
