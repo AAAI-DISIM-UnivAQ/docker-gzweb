@@ -1,4 +1,4 @@
-# Started from http://github.com/osrf/docker_images/blob/master/gazebo/gazebo7/gzweb7/Dockerfile
+# derived from http://github.com/osrf/docker_images/blob/master/gazebo/gazebo7/gzweb7/Dockerfile
 
 FROM gazebo:libgazebo7
 # originally from MAINTAINER Steven Peters scpeters+buildfarm@osrfoundation.org
@@ -37,6 +37,11 @@ RUN cd ~/gzweb \
 # setup environment
 EXPOSE 8080
 EXPOSE 7681
+
+# make a missing folder
+CMD mkdir /root/gzweb/http/client/assets
+# download models & assets
+CMD cd /root/gzweb && ./deploy.sh -m
 
 # run gzserver and gzweb
 # CMD ./root/gzweb/start_gzweb.sh && gzserver
