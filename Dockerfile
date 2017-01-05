@@ -24,7 +24,7 @@ RUN apt-get install -q -y \
 
 # install gazebo packages
 RUN apt-get install -q -y \
-    libgazebo7-dev=7.3.1* \
+    libgazebo7-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # clone gzweb
