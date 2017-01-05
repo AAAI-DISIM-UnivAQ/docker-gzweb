@@ -41,7 +41,7 @@ EXPOSE 7681
 # make a missing folder
 CMD mkdir /root/gzweb/http/client/assets
 # download models & assets
-CMD cd /root/gzweb && ./deploy.sh -m
+CMD cd /root/gzweb && ./deploy.sh -m -t
 
 # run gzserver and gzweb
 # CMD ./root/gzweb/start_gzweb.sh && gzserver
